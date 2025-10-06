@@ -1,0 +1,26 @@
+\section{Fundamentação Teórica}
+\label{sec:fundamentacao}
+
+
+\subsection{Observações sobre a compilação do documento}
+
+A classe \textsl{sbc2025} é projetada para trabalhar com os \textit{engines} pdftex e luatex. Dessa forma, deve-se compilar o documento 
+\begin{enumerate}
+    \item no Overleaf, ajustando no menu opção de compilação para \textbf{xelatex} ou \textbf{lualatex}.\footnote{Os engines são denominados xetex e luatex. Já os comandos de compilação são \textsl{xelatex} e \textsl{lualatex}.}
+    \item se compilando localmente, na sua IDE faça o ajuste do compilador. Se usuário raiz, no terminal de comando, digite \textsl{xelatex filename} ou \textsl{lualatex filename}. Não é necessário digitar a extensão \textsl{tex}.
+\end{enumerate}
+
+A classe \textsl{sbc2025} inclui internamente os seguintes pacotes:     \texttt{xcolor}; \texttt{graphicx}; \texttt{amsmath} \texttt{amssymb}; \texttt{hyperref};     \texttt{babel}.
+
+\noindent consequentemente, não há necessidade de incluí-los no preâmbulo.
+
+{\bfseries Quem tentar compilar usando a opção \texttt{pdflatex} no Overleaf vai receber uma mensagem de erro solicitando o usuário a ajustar a opção de compilação.}
+
+Para a pergunta \textit{Por que não funciona com o \texttt{pdflatex}}?  A resposta é: \textbf{fontes!} Pdflatex usa um esquema de codificação de fontes complexo. 
+O fonte \texttt{academicons}\footnote{Do fonte em questão usa-se apenas o glifo associado ao OrchID.} não tem as definições necessárias para uso com o \texttt{pdflatex}. Enquanto isso não for realizado, \texttt{pdflatex} não pode ser usado. 
+
+
+
+\subsection{Outra subseção}
+
+Evite deixar \textbf{uma única} subseção dentro de uma seção. Nestes casos, é possível utilizar-se de conectores para remover a divisão da subseção e escrever o texto da seção de forma direta. Não levantando assim, a expectativa de uma segunda subseção.
